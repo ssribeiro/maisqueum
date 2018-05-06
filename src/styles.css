@@ -1,4 +1,5 @@
 /* pace loading */
+@import url("https://www.w3schools.com/w3css/4/w3.css");
 
 /* You can add global styles to this file, and also import other style files */
 body { background: black; margin: 0; padding: 0; }
@@ -10,3 +11,64 @@ body, html {height: 100%}
     background-position: center;
     background-size: cover;
 }
+
+.q1-white { color: white !important; }
+.q1-black { color: black !important; }
+.q1-green { color: #60d0ad !important; }
+.q1-wine { color: #65304e !important; }
+.q1-orange { color: #f28334 !important; }
+.q1-bg-white { background-color: white !important; }
+.q1-bg-black { background-color: black !important; }
+.q1-bg-green { background-color: #60d0ad !important; }
+.q1-bg-wine { background-color: #65304e !important; }
+.q1-bg-orange { background-color: #f28334 !important; }
+
+.q1-bg-black-light { background-color: #1d1d1d !important; }
+.q1-black-light { color: #1d1d1d !important; }
+
+.q1-bg-greymark { background-color: #808080 !important; }
+
+.q1-border-wine { border-style: solid !important; border-width: medium !important; border-color: #65304e !important; }
+
+.w3-border-theme {border-color:#f28334 !important}
+.w3-hover-border-theme:hover {border-color:#f28334 !important}
+
+.q1-card {
+  margin: -16px !important;
+}
+
+.q1-card-vera {
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(93,93,93,1);
+  -moz-box-shadow: 0px 0px 10px 3px rgba(93,93,93,1);
+  box-shadow: 0px 0px 10px 3px rgba(93,93,93,1);
+}
+
+.form-line {
+  padding: 10px;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+/*
+.w3-theme-l5 {color:#000 !important; background-color:#f3f4fb !important}
+.w3-theme-l4 {color:#000 !important; background-color:#d8dcf1 !important}
+.w3-theme-l3 {color:#000 !important; background-color:#b1b8e3 !important}
+.w3-theme-l2 {color:#fff !important; background-color:#8995d6 !important}
+.w3-theme-l1 {color:#fff !important; background-color:#6271c8 !important}
+.w3-theme-d1 {color:#fff !important; background-color:#3949a3 !important}
+.w3-theme-d2 {color:#fff !important; background-color:#334191 !important}
+.w3-theme-d3 {color:#fff !important; background-color:#2d397f !important}
+.w3-theme-d4 {color:#fff !important; background-color:#26316d !important}
+.w3-theme-d5 {color:#fff !important; background-color:#20295b !important}
+
+.w3-theme-light {color:#000 !important; background-color:#f3f4fb !important}
+.w3-theme-dark {color:#fff !important; background-color:#20295b !important}
+.w3-theme-action {color:#fff !important; background-color:#20295b !important}
+
+.w3-theme {color:#fff !important; background-color:#3f51b5 !important}
+.w3-text-theme {color:#3f51b5 !important}
+.w3-border-theme {border-color:#f28334 !important}
+
+.w3-hover-theme:hover {color:#fff !important; background-color:#3f51b5 !important}
+.w3-hover-text-theme:hover {color:#3f51b5 !important}
+*/

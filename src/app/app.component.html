@@ -1,13 +1,228 @@
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-  <div class="w3-display-topleft w3-padding-large w3-xlarge">
-    <img src="assets/img/logo_dark.png" class="logo">
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white" *ngIf="page=='index'">
+
+  <div class="index-page">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+      <img src="assets/img/logo_dark.png" class="logo">
+    </div>
+    <div class="w3-display-middle">
+      <h1 class="w3-jumbo w3-animate-top">ESTÁ CHEGANDO..</h1>
+      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <p class="w3-large w3-center">Falta pouco para o lançamento do app</p>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large sizeControll">
+      Realização <a href="http://www.igrejadaorla.com.br" target="_blank">Igreja da Orla</a>
+    </div>
+    <div class="right-size w3-display-bottomleft w3-padding-large sizeControll">
+      <a (click)="goToPage('equipe')">Área da Equipe</a>
+    </div>
   </div>
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">ESTÁ CHEGANDO..</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center">Falta pouco para o lançamento do app</p>
+
+</div>
+
+<div class="w3-display-container w3-animate-opacity w3-text-white" *ngIf="page=='equipe'">
+  <br>
+  <br>
+
+  <div class="w3-container">
+    <label class=""><b>Senha Equipe</b></label>
+    <input (change)="changePassword($event.target.value)" class="w3-input w3-border" type="text">
   </div>
-  <div class="w3-display-bottomleft w3-padding-large sizeControll">
-    Realização <a href="http://www.igrejadaorla.com.br" target="_blank">Igreja da Orla</a>
+
+  <div *ngIf="isWrongPassword()">
+    Errrrouuu! Tente novamente.
   </div>
+
+  <div *ngIf="isOkPassword()">
+
+    <div class="w3-container">
+      <h1 class="w3-jumbo w3-animate-top">Área Secreta:</h1>
+      <br>
+      Fonte padronizada: <a href="https://fonts.google.com/selection?selection.family=Saira">SAIRA</a>
+      <p>CORES:</p>
+
+      <div class="q1-bg-green">
+        <span class="q1-white">VERDE</span>
+      </div>
+      <div class="q1-bg-orange">
+        <span class="q1-white">LARANJA</span>
+      </div>
+      <div class="q1-bg-wine">
+        <span class="q1-white">VINHO</span>
+      </div>
+      <div class="q1-bg-black">
+        <span class="q1-white">PRETO</span>
+      </div>
+      <div class="q1-bg-white">
+        <span class="q1-black">BRANCO</span>
+      </div>
+
+      <p>Exemplo do formulário com as cores da paleta:</p>
+
+      <form class="w3-container">
+
+        <label class="q1-white"><b>NOME</b></label>
+        <input class="w3-input w3-border-0" type="text">
+
+        <label class="q1-white"><b>IDADE</b></label>
+        <input class="w3-input w3-border-0" type="number">
+
+        <button class="w3-btn q1-bg-green">REGISTRAR</button>
+        <button class="w3-btn q1-bg-wine">CANCELAR</button>
+
+      </form>
+
+      <p>Com Espaços:</p>
+
+      <form class="w3-container">
+
+        <label class="q1-white"><b>NOME</b></label>
+        <input class="w3-input w3-border-0" type="text">
+        <br>
+        <label class="q1-white"><b>IDADE</b></label>
+        <input class="w3-input w3-border-0" type="number">
+        <br>
+        <button class="w3-btn q1-bg-green">REGISTRAR</button>
+        <button class="w3-btn q1-bg-wine">CANCELAR</button>
+
+      </form>
+
+      <p>Com marcas cinza atras:</p>
+
+      <div class="q1-card">
+        <br>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>NOME</b></label>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>IDADE</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>CELULAR</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>Frequenta alguma Igreja? Qual?</b></label><br>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>Como Conheceu a Juventude?</b></label><br>
+          <input class="w3-check" type="checkbox" checked="checked">&nbsp;<label>Amigos</label>&nbsp;&nbsp;&nbsp;
+          <input class="w3-check" type="checkbox">&nbsp;<label>Redes Sociais</label>
+        </div>
+        <br>
+      </div>
+
+      <p>Com marcas cinza atras em CARD:</p>
+
+      <div class="q1-card-vera">
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>NOME</b></label>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>IDADE</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>CELULAR</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>Frequenta alguma Igreja? Qual?</b></label><br>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>Como Conheceu a Juventude?</b></label><br>
+          <input class="w3-check" type="checkbox" checked="checked">&nbsp;<label>Amigos</label>&nbsp;&nbsp;&nbsp;
+          <input class="w3-check" type="checkbox">&nbsp;<label>Redes Sociais</label>
+        </div>
+      </div>
+
+      <p>Com bordas WINE:</p>
+
+      <div class="q1-border-wine">
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>NOME</b></label>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>IDADE</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>CELULAR</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>Frequenta alguma Igreja? Qual?</b></label><br>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>Como Conheceu a Juventude?</b></label><br>
+          <input class="w3-check" type="checkbox" checked="checked">&nbsp;<label>Amigos</label>&nbsp;&nbsp;&nbsp;
+          <input class="w3-check" type="checkbox">&nbsp;<label>Redes Sociais</label>
+        </div>
+      </div>
+
+      <p>Com bordas WINE EM CARD:</p>
+
+      <div class="q1-border-wine q1-card-vera">
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>NOME</b></label>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>IDADE</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>CELULAR</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>Frequenta alguma Igreja? Qual?</b></label><br>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>Como Conheceu a Juventude?</b></label><br>
+          <input class="w3-check" type="checkbox" checked="checked">&nbsp;<label>Amigos</label>&nbsp;&nbsp;&nbsp;
+          <input class="w3-check" type="checkbox">&nbsp;<label>Redes Sociais</label>
+        </div>
+      </div>
+
+      <p>Com bordas WINE Esticado:</p>
+
+      <div class="q1-border-wine" style="margin: -16px !important;">
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>NOME</b></label>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>IDADE</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>CELULAR</b></label>
+          <input class="w3-input w3-border-0" type="number">
+        </div>
+        <div class="form-line q1-bg-greymark">
+          <label class="q1-white"><b>Frequenta alguma Igreja? Qual?</b></label><br>
+          <input class="w3-input w3-border-0" type="text">
+        </div>
+        <div class="form-line q1-bg-black-light">
+          <label class="q1-white"><b>Como Conheceu a Juventude?</b></label><br>
+          <input class="w3-check" type="checkbox" checked="checked">&nbsp;<label>Amigos</label>&nbsp;&nbsp;&nbsp;
+          <input class="w3-check" type="checkbox">&nbsp;<label>Redes Sociais</label>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="right-size w3-display-bottomleft w3-padding-large sizeControll">
+    <a (click)="goToPage('index')">Voltar</a>
+  </div>
+  <br>
+  <br>
 </div>

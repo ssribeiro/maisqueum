@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  page = 'index';
+  password = '';
+  goToPage(page) { this.page = page; }
+  isOkPassword() { return this.password=='design'; }
+  isWrongPassword() { return this.password!='' && this.password!='design'; }
+  changePassword(event) { this.password = event; }
 }
