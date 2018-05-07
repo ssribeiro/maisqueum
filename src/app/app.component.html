@@ -1,19 +1,17 @@
 <div class="bgimg w3-display-container w3-animate-opacity w3-text-white" *ngIf="page=='index'">
 
+  <img src="assets/img/logo_dark.png" class="q1-logo">
+
   <div class="index-page">
-    <div class="w3-display-topleft w3-padding-large w3-xlarge">
-      <img src="assets/img/logo_dark.png" class="logo">
-    </div>
     <div class="w3-display-middle">
-      <h1 class="w3-jumbo w3-animate-top">ESTÁ CHEGANDO..</h1>
-      <hr class="w3-border-grey" style="margin:auto;width:40%">
+      <h1 class="w3-jumbo w3-animate-top">ESTÁ CHEGANDO</h1>
+      <br>
+      <br>
       <p class="w3-large w3-center">Falta pouco para o lançamento do app</p>
     </div>
     <div class="w3-display-bottomleft w3-padding-large sizeControll">
+      <a (click)="goToPage('equipe')">Área da Equipe</a><br>
       Realização <a href="http://www.igrejadaorla.com.br" target="_blank">Igreja da Orla</a>
-    </div>
-    <div class="right-size w3-display-bottomleft w3-padding-large sizeControll">
-      <a (click)="goToPage('equipe')">Área da Equipe</a>
     </div>
   </div>
 
@@ -35,7 +33,7 @@
   <div *ngIf="isOkPassword()">
 
     <div class="w3-container">
-      <h1 class="w3-jumbo w3-animate-top">Área Secreta:</h1>
+      <h1 class="w3-jumbo w3-animate-top">ÁREA SECRETA</h1>
       <br>
       Fonte padronizada: <a href="https://fonts.google.com/selection?selection.family=Saira">SAIRA</a>
       <p>CORES:</p>
@@ -219,8 +217,11 @@
       </div>
 
   </div>
+  <div class="q1-finalizador"></div>
+  <img src="assets/img/logo.jpg" class="q1-logo-back">
+  <div class="q1-logo-barra"></div>
 
-  <div class="right-size w3-display-bottomleft w3-padding-large sizeControll">
+  <div class="w3-display-bottomleft w3-padding-large sizeControll">
     <a (click)="goToPage('index')">Voltar</a>
   </div>
   <br>
